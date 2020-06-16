@@ -1,0 +1,40 @@
+<div class="container-fluid"style="background-image: url('../../../../assets/images/background.PNG');">
+  <a routerLink="/shared/PatientRegister"  type="button" class="btn btn-success btn-m bt">Add Patient</a>
+  <!-- <div id="bil"></div> -->
+<table class="table table-striped table-light" style="border: 2px solid black;">
+  <thead class="bg-dark text-light">
+      <tr>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Address</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Age</th>
+        <th scope="col">Date</th>
+        <th scope="col">password</th>
+        <th scope="col">Dispatcher</th>
+        <th colspan="2">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of patients">
+        <!-- <th scope="row">{{item.test_id}}</th> -->
+       
+
+          <td>{{item.pat_f_name}}</td>
+          <td>{{item.pat_l_name}}</td>
+          <td>{{item.pat_mail}}</td>
+          <td>{{item.pat_address}}</td>
+          <td>{{item.pat_gender}}</td>
+          <td>{{item.pat_age}}</td>
+          <td>{{item.date|date}}</td>
+          <td>{{item.pat_password}}</td>
+          <td>-</td>
+          <!-- <td>{{item.Dep_fk}}</td> -->
+          
+        <td><button type="button" [routerLink]="['admin/DeletePatient',item.pat_Id ]" class="btn btn-info">Edit</button></td>
+        <td><button type="button" [routerLink]="['admin/DeletePatient',item.pat_Id ]" class="btn btn-danger">Delete</button></td>
+      </tr>
+   
+    </tbody>
+</table>

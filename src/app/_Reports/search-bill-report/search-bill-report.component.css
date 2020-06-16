@@ -1,0 +1,11 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+p{
+    background-color: burlywood;
+    margin:300px;
+}
+
+.container {
+  width: 300px;
+  font: 17px Calibri;
+}
